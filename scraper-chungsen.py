@@ -113,6 +113,9 @@ today_str = today.strftime("%Y%m%d")
 
 out_dir = Path(f"./data/{today_str}")
 out_dir.mkdir(parents=True, exist_ok=True)
-filename = "listings-chungsen.csv"
 
+filename = "listings-chungsen.csv"
 df.to_csv(out_dir / filename, index_label="row_number")
+
+filename = "listings-chungsen.xlsx"
+df.to_excel(out_dir / filename, index_label="row_number")
